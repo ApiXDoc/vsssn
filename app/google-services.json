@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "499565986206",
+    "project_id": "vsssn-507e2",
+    "storage_bucket": "vsssn-507e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499565986206:android:71e2203aafa42a3cb5968f",
+        "android_client_info": {
+          "package_name": "com.mradkingshop.vsssn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499565986206-i4862f637ai11n933spovk4nj7ko530v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCguH5x6XSOW1QJkdqnWQ099V_ilGK5kag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499565986206-i4862f637ai11n933spovk4nj7ko530v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

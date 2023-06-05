@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swiperefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@mipmap/icon"
+                    android:id="@+id/plan_image"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+
+                    ></ImageView>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Order Amount : "
+                        android:padding="10dp"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:id="@+id/plane_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="#000" />
+
+                    //////////////////my donation
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:id="@+id/name_layout"
+                        android:padding="5dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name : "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            android:layout_marginRight="25dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:id="@+id/date_layout"
+                        android:padding="5dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Donation Date: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0"
+
+                            android:textStyle="bold"
+                            android:layout_marginRight="25dp"/>
+
+                    </LinearLayout>
+                    /////////////////////my donation
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Collection : "
+                            android:id="@+id/donation_amt_txt"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/donation_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0"
+
+                            android:textStyle="bold"
+                            android:layout_marginRight="25dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="gone"
+
+                        android:id="@+id/no_people_donate_layout"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No.People Donate : "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/number_pepople_donate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0"
+                            android:layout_marginRight="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:id="@+id/state_layout"
+                        android:padding="5dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="State : "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/state_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            android:layout_marginRight="25dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:id="@+id/invested_date_layout"
+                        android:padding="5dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Investment Date : "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/investment_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0"
+
+                            android:textStyle="bold"
+                            android:layout_marginRight="25dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:id="@+id/investment_end_date_layout"
+                        android:paddingBottom="35dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Investment End Date : "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/investment_end_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0"
+
+                            android:textStyle="bold"
+                            android:layout_marginRight="25dp"/>
+
+
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/view"
+                        android:visibility="gone"
+                        ></View>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            app:cardBackgroundColor="@color/colorAccent"
+                            app:cardCornerRadius="5dp"
+                            android:padding="5dp"
+
+                            android:id="@+id/deleat_bt"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_marginTop="30dp"
+                            android:layout_alignParentRight="true"
+                            app:cardElevation="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="match_parent">
+
+
+                                <TextView
+                                    android:id="@+id/delet_bt_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="Delete"
+                                    android:textColor="#fff"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            app:cardBackgroundColor="@color/light_green_600"
+                            app:cardCornerRadius="5dp"
+                            android:id="@+id/edit_bt"
+                            android:visibility="gone"
+
+                            android:padding="5dp" android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_alignParentRight="true"
+                            app:cardElevation="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="match_parent">
+
+
+                                <TextView
+                                    android:id="@+id/edit_bt_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="Edit"
+                                    android:textColor="#fff"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            app:cardBackgroundColor="@color/colorAccent"
+                            app:cardCornerRadius="5dp"
+                            android:padding="5dp" android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:id="@+id/donate_bt"
+                            android:visibility="gone"
+                            android:layout_alignParentRight="true"
+                            app:cardElevation="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="match_parent">
+
+
+                                <TextView
+                                    android:id="@+id/call_now_bt_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="Donate Now"
+                                    android:textColor="#fff"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/spacing_middle"
+            android:paddingTop="10dp"
+            android:paddingLeft="80dp"
+            android:visibility="gone"
+            android:id="@+id/tarcking_panel"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp">
+
+                    <View
+                        android:id="@+id/line_first"
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="@dimen/spacing_mxlarge"
+                        android:layout_marginStart="@dimen/spacing_mxlarge"
+                        android:layout_weight="1"
+                        android:background="@color/grey_10" />
+
+                    <View
+                        android:id="@+id/line_second"
+                        android:layout_width="122dp"
+                        android:layout_height="3dp"
+                        android:layout_marginEnd="@dimen/spacing_mxlarge"
+                        android:layout_marginRight="@dimen/spacing_mxlarge"
+                        android:layout_weight="1"
+                        android:background="@color/grey_10" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:id="@+id/image_shipping"
+                        android:layout_width="@dimen/spacing_smlarge"
+                        android:layout_height="@dimen/spacing_smlarge"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_shipping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_mxlarge"
+                        android:text="Packed"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_90" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/image_payment"
+                        android:layout_width="@dimen/spacing_smlarge"
+                        android:layout_height="@dimen/spacing_smlarge"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_mxlarge"
+                        android:text="Pickup"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_20" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/image_confirm"
+                        android:layout_width="@dimen/spacing_smlarge"
+                        android:layout_height="@dimen/spacing_smlarge"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_mxlarge"
+                        android:text="Delivery"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_20" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recent_withdraw_list"
+        android:paddingBottom="80dp"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</LinearLayout></androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_10"
+  >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@android:color/white"
+            app:statusBarScrim="@android:color/white"
+            android:fitsSystemWindows="true"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:titleEnabled="false">
+
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/diya"
+                app:layout_collapseMode="parallax" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/overlay_dark_40"
+                android:fitsSystemWindows="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/spacing_large"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VSSSN(NGO)"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_10" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vedant Satya Sanatan Sanskriti Nyaas"
+                    android:textAllCaps="true"
+                    android:id="@+id/heading"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/grey_3"
+                    app:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:background="@android:color/white"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingTop="@dimen/spacing_medium"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:paddingBottom="@dimen/spacing_medium"
+                    android:text="Reg:-"
+                    android:id="@+id/reg"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_large"
+                android:text="सनातन शक्ति पात्र की आधारशिला"
+                android:textStyle="bold"
+                android:id="@+id/title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_80" />
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:id="@+id/discreption"
+                android:text="Vedant Satya Sanatan Sanskriti Nyaas(VSSSN) स्थापना सन 2003 में हुई थी VSSSN का प्रमुख उद्देश्य सनातन संस्कृति के प्रति लोगों को जागरूक करना तथा लोगों को एकत्र करके गरीबों की सहायता करना तथा गरीब बच्चों को अच्छी शिक्षा प्रदान करना और वृद्ध  लोगों को को आर्थिक तथा स्वास्थ्य संबंधित सहायता प्रदान करना है और देश में नशा मुक्ति और पर्यावरण संबंधित कार्यक्रमों को चलाना है"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_80" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_large"
+                android:visibility="gone"
+                android:text="वर्तमान में हजारों की तादात में लोग आगे बढ़कर सनातन संस्कृति के प्रचार-प्रसार गरीबों की सहायता और वृद्ध लोगों की आर्थिक सहायता तथा स्वास्थ संबंधी कार्यक्रमों में अपना बढ़-चढ़कर योगदान दे रहे हैं
+ जिसके परिणाम स्वरूप हम हजारों लोगों की सहायता कर पा रहे हैं
+
+ आपका छोटे से योगदान से काफी लोगों की मदद हो सकती है तो कृपया आगे बढ़े और अपना योगदान दे"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_80" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_large" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="सेवाएं"
+                android:textColor="#000"
+                android:fontFamily="@font/baloo"
+                android:textSize="22dp"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingLeft="20dp"
+                ></TextView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recent_withdraw_list"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="70dp"></View>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
